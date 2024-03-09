@@ -38,6 +38,7 @@
 
 .bg img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -52,10 +53,10 @@
 }
 
 .form-container h1 {
-    font-size: 8rem;
+    font-size: 8.5em;
 }
 
-.form-container > h1 .colr {
+.form-container>h1 .colr {
     color: cornflowerblue;
 }
 
@@ -63,7 +64,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #ffffff;
     padding: 30px;
     width: 450px;
     border-radius: 20px;
@@ -75,7 +75,7 @@
     gap: 10px;
 }
 
-.flex-column > label {
+.flex-column>label {
     color: #151717;
     font-weight: 600;
     font-size: 1.2rem;
@@ -164,4 +164,42 @@
 
 .cssbuttons-io-button:active .icon {
     transform: scale(0.95);
+}
+
+/* /* // `sm` applies to x-small devices (portrait phones, less than 576px) / */
+@media (max-width: 575.98px) {
+    .bg {
+        display: none;
+    }
+
+    .form-container {
+        width: 100% !important;
+        
+    }
+
+    .form-container h1 {
+        font-size: 6.5em;
+    }
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .cursor {
+        display: none;
+    }
+
+    .bg {
+        width: 30%;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .form-container h1 {
+        font-size: 7em;
+    }
 }
